@@ -9,7 +9,7 @@ namespace Shapes_ZhilinLin
     public class Canvas
     {
     
- 
+        
         public void ShowShape(IShape shape)
         {
             Console.WriteLine(shape.CalculatorArea());
