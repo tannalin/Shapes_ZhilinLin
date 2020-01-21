@@ -10,13 +10,20 @@ namespace Shapes_ZhilinLin
     {
         static void Main(string[] args)
         {
-            Circle circle = new Circle();
-            circle.Radius = 5.0;
-
+            bool yesToContinue = true;
+            GUI display = new GUI();
             Canvas canvas = new Canvas();
-            canvas.ShowShape(circle);
+            while (yesToContinue)
+            {
+                Console.Clear();
+                display.ShowMenu();
+                var shape = display.getShape();
 
-            Console.ReadKey();
+                canvas.ShowShape(shape);
+                Console.Write("Continue: (Y/N)? ");
+                var contKey = Console.ReadKey();
+                yesToContinue = (contKey.Key == ConsoleKey.Y ? true : false);
+            }
         }
     }
 }
