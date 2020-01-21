@@ -24,6 +24,7 @@ namespace Shapes_ZhilinLin
                 case ConsoleKey.C:
                     shape = new Circle();
                     Console.WriteLine("Please enter your circle's radius: ");
+
                     double radius = Convert.ToDouble(Console.ReadLine());
                     ((Circle)shape).Radius = radius; 
                     break;

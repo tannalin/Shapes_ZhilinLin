@@ -12,18 +12,18 @@ namespace Shapes_ZhilinLin
         {
             bool yesToContinue = true;
             GUI display = new GUI();
-            Canvas calc = new Canvas();
+            Canvas canvas = new Canvas();
             while (yesToContinue)
             {
                 Console.Clear();
                 display.ShowMenu();
                 var shape = display.getShape();
-            
-             
+
+                canvas.ShowShape(shape);
                 Console.Write("Continue: (Y/N)? ");
                 var contKey = Console.ReadKey();
                 yesToContinue = (contKey.Key == ConsoleKey.Y ? true : false);
             }
         }
-    
-
+    }
+}
