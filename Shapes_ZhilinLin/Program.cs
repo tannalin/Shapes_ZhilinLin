@@ -10,6 +10,13 @@ namespace Shapes_ZhilinLin
     {
         static void Main(string[] args)
         {
+            Circle circle = new Circle();
+            circle.Radius = 5.0;
+
+            Canvas canvas = new Canvas();
+            canvas.ShowShape(circle);
+
+            Console.ReadKey();
         }
     }
 }
